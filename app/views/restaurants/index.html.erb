@@ -1,0 +1,14 @@
+<h2 class="d-flex justify-content-center">Restaurants</h2>
+
+<div class="row justify-content-center">
+<% @restaurants.each do |restaurant| %>
+<div class="col-4 d-flex justify-content-center">
+  <div class="card my-3" style="width: 18rem;">
+    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text"><%= link_to restaurant.name, restaurant_path(restaurant) %></p>
+    </div>
+  </div>
+  </div>
+<% end %>
+</div>

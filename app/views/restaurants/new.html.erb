@@ -1,0 +1,11 @@
+<h1>Create a new Restaurant, youpi !</h1>
+<div ></div>
+<%= simple_form_for [ @restaurant ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: Restaurant::CATEGORIES %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Go back to list", restaurants_path %>
